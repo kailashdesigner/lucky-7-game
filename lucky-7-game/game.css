@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lobster', cursive;
+}
+
+.game-container{
+    padding:50px 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+}
+.game-diceyBox{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.game-dicey{
+    flex: 0 0 20%;
+    max-width: 30%;
+    text-align: center;
+    border:1px solid #eee;
+    padding: 40px 0px;
+    border:1px solid #3758a0;
+    font-size: 20px;
+    color: #3758a0;
+}
+.game-result{
+    width: 100%;
+    padding: 30px 0px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    color: #4a4848;
+}
+.game-result.Green{
+    color:rgb(51, 195, 51);
+}
+.game-result.Red{
+    color: red;
+}
+.gameButton{
+    width: 100%;
+    text-align: center;
+}
+.gameButton .btn{
+    padding: 8px 30px;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    background-color: #3758a0;
+    border: 1px solid #3758a0;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 300;
+}
+
+.playAgainButton{
+    text-align: center;
+    padding: 30px 0px;
+}
+.playAgainButton button{
+    padding: 8px 30px;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    background-color: #e064dc;
+    border: 1px solid #e064dc;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 300;
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+
+}
+.gameButton .btn:hover{
+    box-shadow: 0px 5px 5px 0px #3758a087;
+}
+.playAgainButton button:hover{
+    box-shadow: 0px 5px 5px 0px #e064dc7d;
+} 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./game.css">
+    <title>Lucky 7 Game</title>
+</head>
+<body>
+    
+    <div class="game-container">
+        <div class="game-diceyBox">
+            <div class="game-dicey" id="dicey1"></div>
+            <div class="game-dicey" id="dicey2"></div>
+        </div>
+        <div class="game-result" id="GameResult">
+            Your Result Will show here
+        </div>
+        <div class="gameButton">
+            <button type="button" class="btn" onclick="LessThan7(1,6)">Less Than 7</button>
+            <button type="button" class="btn" onclick="Lucky7(1,6)">Lucky 7</button>
+            <button type="button" class="btn" onclick="MoreThan7(1,6)">More Than 7</button>
+        </div>
+        <!-- <div class="playAgainButton">
+            <button class="btn btn-again" onclick="playAgain()">Play Again</button>
+        </div> -->
+    </div>
+
+    <script>
+
+   function LessThan7(min,max){
+        var diceyArray = [Math.floor(Math.random() * (max - min) + min),Math.floor(Math.random() * (max - min) + min)];
+        var dicey1 = document.getElementById('dicey1').innerHTML = diceyArray[0];
+        var dicey2 = document.getElementById('dicey2').innerHTML = diceyArray[1];
+        var diceyAnswer = dicey1 + dicey2;
+        var GameResult = document.getElementById('GameResult');
+        if(diceyAnswer<7){
+            GameResult.innerHTML = 'You Won';
+            GameResult.classList.add('Green');
+            GameResult.classList.remove('Red');
+        }
+        else {
+            GameResult.innerHTML = 'You Lose';
+            GameResult.classList.add('Red');
+            GameResult.classList.remove('Green');
+        }
+   }
+   function Lucky7(min,max){
+        var diceyArray = [Math.floor(Math.random() * (max - min) + min),Math.floor(Math.random() * (max - min) + min)];
+        var dicey1 = document.getElementById('dicey1').innerHTML = diceyArray[0];
+        var dicey2 = document.getElementById('dicey2').innerHTML = diceyArray[1];
+        var diceyAnswer = dicey1 + dicey2;
+        if(diceyAnswer == 7){
+    GameResult.innerHTML = 'You Won';
+            GameResult.classList.add('Green');
+            GameResult.classList.remove('Red');
+        }
+        else {
+            GameResult.innerHTML = 'You Lose';
+            GameResult.classList.add('Red');
+            GameResult.classList.remove('Green');
+        }
+   }
+   function MoreThan7(min,max){
+        var diceyArray = [Math.floor(Math.random() * (max - min) + min),Math.floor(Math.random() * (max - min) + min)];
+        var dicey1 = document.getElementById('dicey1').innerHTML = diceyArray[0];
+        var dicey2 = document.getElementById('dicey2').innerHTML = diceyArray[1];
+        var diceyAnswer = dicey1 + dicey2;
+        if(diceyAnswer > 7){
+    GameResult.innerHTML = 'You Won';
+            GameResult.classList.add('Green');
+            GameResult.classList.remove('Red');
+        }
+        else {
+            GameResult.innerHTML = 'You Lose';
+            GameResult.classList.add('Red');
+            GameResult.classList.remove('Green');
+        }
+   }
+
+function playAgain(){
+    window.location.reload();
+}
+    </script>
+</body>
+</html>
